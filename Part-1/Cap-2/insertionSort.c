@@ -10,10 +10,6 @@ int main() {
 
   printf("Lista: ");
 
-  for(int l = 0; l <= 10; l++){
-    printf("%d", l);
-  }
-
   for (i = 0; i < tam; i++) {
 
     printf("%d ", vet[i]);
