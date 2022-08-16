@@ -1,6 +1,4 @@
-/* Escreva o algoritmo, recursivamente e iterativamente, para busca binaria.
- * Demonstre que o tempo de execuçao do pior caso de busca binaria é O(lg n)
- */
+/* Escreva o algoritmo, recursivamente e iterativamente, para busca binaria */
 
 #include <stdbool.h>
 #include <stdio.h>
