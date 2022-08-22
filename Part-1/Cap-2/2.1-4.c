@@ -11,6 +11,7 @@ int *somarBits(int A[], int B[], int tam) {
   int tamC = tam + 1;
   int *C = malloc(sizeof(int) * tamC);
   int vaiUm = 0, soma, pos;
+  
 
   for (int i = 0; i < tam; i++) {
     soma = A[i] + B[i] + vaiUm;
@@ -44,9 +45,11 @@ int main() {
 
   printf("\nBit A = 11011");
   printf("\nBit B = 01011");
+  printf("$1");
 
   int A[] = {1, 1, 0, 1, 1};
   int B[] = {1, 1, 0, 1, 0};
+
 
   int *C = somarBits(A, B, 5);
 

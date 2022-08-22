@@ -2,18 +2,18 @@
 
 #include <stdbool.h>
 #include <stdio.h>
-void merge(int array[], int p, int q, int r) {
+void merge(int array[], int inicio, int q, int fim) {
 
   // Se lembre que o array comeca no 0
-  int n1 = q - p + 1;
-  int n2 = r - q;
+  int n1 = q - inicio + 1;
+  int n2 = fim - q;
   int pos, i, j;
 
   int L[n1];
   int R[n2];
 
   for (i = 0; i < n1; i++) {
-    pos = p + i;
+    pos = inicio + i;
     L[i] = array[pos];
   }
 
@@ -24,7 +24,7 @@ void merge(int array[], int p, int q, int r) {
   i = 0;
   j = 0;
   int k;
-  for (k = p; k <= r; k++) {
+  for (k = inicio; k <= fim; k++) {
 
     // Copia o ultimo elemento que sobrou
     if ((i < n1 && L[i] < R[j]) || (j == n2)) {
@@ -37,13 +37,13 @@ void merge(int array[], int p, int q, int r) {
   }
 }
 
-void mergerSort(int array[], int p, int r) {
+void mergerSort(int array[], int inicio, int fim) {
   int q;
-  if (p < r) {
-    q = (r + p) / 2;
-    mergerSort(array, p, q);
-    mergerSort(array, q + 1, r);
-    merge(array, p, q, r);
+  if (inicio < fim) {
+    q = (fim + inicio) / 2;
+    mergerSort(array, inicio, q);
+    mergerSort(array, q + 1, fim);
+    merge(array, inicio, q, fim);
   }
 }
 
